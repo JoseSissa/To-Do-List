@@ -1,0 +1,2 @@
+* npx create-react-app ./ ->Se usa npx porque así la instalación solo se hace temporalmente, por este proyecto de tal forma que nos aseguramos que por cada nuevo proyecto usemos siempre la última versión (versión estable) de React.
+-> Además de que nos instala las dependencias necesarias para trabajar con este entorno.
