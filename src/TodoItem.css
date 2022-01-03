@@ -1,0 +1,30 @@
+.TodoItem {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  padding: 0 16px;
+  border: 1px solid #183153;
+  border-radius: 15px;
+  background-color: #FFD43B;
+  box-shadow: 0 6px 0 #183153;
+  }
+
+.check {
+  width: 25px;
+  height: 25px;
+}
+.trash {
+  width: 18px;
+  height: 24px;
+}
+.TodoItem-p {
+  margin: 24px 0 24px 24px;
+  width: calc(100% - 120px);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}

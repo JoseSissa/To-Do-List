@@ -1,0 +1,7 @@
+.TodoTask {
+    width: 100%;
+}
+ul {
+    padding: 0 20px;
+    list-style: none;
+}
