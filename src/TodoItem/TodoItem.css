@@ -12,7 +12,7 @@
   background-color: #FFD43B;
   box-shadow: 0 6px 0 #183153;
   }
-
+.check, .trash {cursor: pointer;}
 .check {
   width: 25px;
   height: 25px;
@@ -27,4 +27,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+}
+.TodoItem-p--completed {
+  text-decoration-line: line-through;
 }

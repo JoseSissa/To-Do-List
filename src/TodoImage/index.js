@@ -1,5 +1,5 @@
 import React from "react";
-import allImage from './assets/image/image';
+import allImage from '../assets/image/image';
 import './TodoImage.css';
 
 function TodoImage () {
