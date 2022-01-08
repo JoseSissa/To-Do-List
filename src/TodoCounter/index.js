@@ -1,11 +1,12 @@
 import React from 'react';
+import { todoContext } from '../TodoContext';
 import './TodoCounter.css';
 
-function TodoCounter (props) {
+function TodoCounter () {
     // También se puede colocar las variables recibidas en el props de la function.
-    const { completed, total } = props;
+    const { completedTodos, totalTodos } = React.useContext(todoContext);
     return (
-        <h2 className='TodoCounter'>You have completed {completed} of {total} tasks.</h2>
+        <h2 className='TodoCounter'>You have completed {completedTodos} of {totalTodos} tasks.</h2>
     );
 }
 
