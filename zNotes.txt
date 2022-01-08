@@ -3,3 +3,7 @@
 
 React solo acepta una etiqueta para renderizar, pero dentro de esta se pueden colocar más etiquetas o componentes
 React.Frgament -> Sirve para lo de arriba, pero siendo una etiqueta invisible que no se dibuja en el HTML.
+
+
+Hechar un ojito a la documentación:
+https://es.reactjs.org/docs/hooks-effect.html

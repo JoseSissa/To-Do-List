@@ -2,62 +2,88 @@ import React from 'react';
 import './App.css';
 import { AppUI } from './AppUI';
 
-const defaultTodos = [
-  {
-    text: "Get a job",
-    completed: false
-  },
-  {
-    text: "Learn React",
-    completed: true
-  },
-  {
-    text: "To do person projects",
-    completed: false
-  },
-  {
-    text: "Be happy",
-    completed: false
-  },
-  {
-    text: "Have a title",
-    completed: true
-  },
-]
+// const defaultTodos = [
+//   {
+//     text: "Get a job",
+//     completed: false
+//   },
+//   {
+//     text: "Learn React",
+//     completed: true
+//   },
+//   {
+//     text: "To do person projects",
+//     completed: false
+//   },
+//   {
+//     text: "Be happy",
+//     completed: false
+//   },
+//   {
+//     text: "Have a title",
+//     completed: true
+//   },
+// ]
 
 
 function useLocalStorage (itemName, initialValue) {
+  // Desde este hook puedo llamar a otros hooks tanto de react como los creados por mi.
+  const [error, setError] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
+  const [item, setItem] = React.useState(initialValue);
+  // Aqui este use effect se crea para simular la petición a una API.
+  React.useEffect(()=>{
+    setTimeout(()=>{
+      try {
+        const localStorageItem = localStorage.getItem(itemName);
+        let parsedItem;  
+        
+        if (!localStorageItem) {
+          localStorage.setItem(itemName, JSON.stringify(initialValue));
+          parsedItem = initialValue;
+        } else {
+          parsedItem = JSON.parse(localStorageItem);
+        };
 
-  const localStorageItem = localStorage.getItem(itemName);
-  let parsedItem;
-  
-  
-  if (!localStorageItem) {
-    localStorage.setItem(itemName, JSON.stringify(initialValue));
-    parsedItem = initialValue;
-  } else {
-    parsedItem = JSON.parse(localStorageItem);
-  };
+        setItem(parsedItem);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+      };
 
-  const [item, setItem] = React.useState(parsedItem);
+    },1000)
+  });
+
+  
 
   const saveItem = (newItem)=>{
-    const stringifiedItem = JSON.stringify(newItem);
-    localStorage.setItem(itemName, stringifiedItem);
-    setItem(newItem);
+    try {
+      const stringifiedItem = JSON.stringify(newItem);
+      localStorage.setItem(itemName, stringifiedItem);
+      setItem(newItem);
+    } catch (error) {
+      setError(error);
+    };
   };
 
-  return [
+  return {
     item,
-    saveItem
-  ];
+    saveItem, 
+    loading,
+    error
+  };
 };
 
 
 
 function App() {
 
-  const [todos, saveTodos] = useLocalStorage('TODO_V1');
+  const {
+    item : todos,
+    saveItem : saveTodos,
+    loading,
+    error
+  } = useLocalStorage('TODO_V1', []);
   
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -95,10 +121,10 @@ function App() {
     saveTodos(newTodos);
   };
 
-
-
   return ( 
     <AppUI 
+      loading={loading}
+      error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
 

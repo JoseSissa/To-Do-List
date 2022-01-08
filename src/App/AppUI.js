@@ -7,13 +7,15 @@ import { TodoItem } from '../TodoItem/index.js';
 import { CreateTodoButton } from '../CreateTodoButton/index.js';
 
 function AppUI({ 
-        completedTodos,
-        totalTodos,
-        searchValue,
-        setSearchValue,
-        searchedTodos,
-        completeTodo,
-        deleteTodo
+    loading,
+    error,
+    completedTodos,
+    totalTodos,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    completeTodo,
+    deleteTodo
     }) {
     return (
         <React.Fragment>
@@ -30,6 +32,12 @@ function AppUI({
                 />
 
                 <TodoList>
+
+                    {error && <p>Hay un error.</p>}
+                    {loading && <p>Estamos cargando ...</p>}
+                    {(!loading && !searchedTodos.length) && <p>Crea un nuevo TO-DO</p>}
+
+
                     {searchedTodos.map(todo => (
                         <TodoItem 
                             key={todo.text}
