@@ -1,44 +1,58 @@
+.createTodo {
+    width: 95%;
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #183153;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: white;
+    box-shadow: 0px 5px 3px 7px rgba(154, 154, 154, 0.5);
+}
+.createTodo_text {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    min-width: 90%;
+    border-radius: 15px;
+    height: 120px;
+    resize: none;
+    padding: 15px;
+}
+
+.createTodo_buttons {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    width: 100px;
+    height: 45px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 6px 0 #183153;
+    transition: all .1s;
+}
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #183153;
+}
+.button:active {
+    transform: translateY(0px);
+    box-shadow: 0 6px 0 #183153;
+}
+.createTodo_buttons--cancel {
+    background-color: #EB1313;
+}
+.createTodo_buttons--submit {
+    background-color: #FFD43B;
+}
 @media (max-width: 800px) {
     .createTodo {
-        width: 95%;
-        height: 300px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        color: #183153;
-        padding: 20px;
-        border-radius: 20px;
-        font-family: 'Ubuntu', sans-serif;
-        background-color: white;
-    }
-    .createTodo_text {
-        font-family: 'Ubuntu', sans-serif;
-        min-width: 90%;
-        border-radius: 15px;
-        height: 120px;
-        resize: none;
-        padding: 15px;
-    }
-
-    .createTodo_buttons {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .button {
-        width: 100px;
-        height: 45px;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        border: none;
-        box-shadow: 0 6px 0 #183153;
-    }
-    .createTodo_buttons--cancel {
-        background-color: #EB1313;
-    }
-    .createTodo_buttons--submit {
-        background-color: #FFD43B;
+        box-shadow: none;
     }
 }

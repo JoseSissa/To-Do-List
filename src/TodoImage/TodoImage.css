@@ -1,13 +1,20 @@
 .ImageBg {
+    display: block;
     width: 50%;
     box-sizing: border-box;
-    margin-top: 50px;
     padding: 0px 20px;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+
 }
 .ImageBg-fondo {
     width: 100%;
     height: 700px;
     border-radius: 16px;
     object-fit: contain;
+}
+@media (max-width: 800px) {
+    .ImageBg {
+        display: none;
+    }
 }

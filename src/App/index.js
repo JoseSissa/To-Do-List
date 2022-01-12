@@ -9,6 +9,6 @@ function App() {
       <AppUI />
     </TodoProvider>
   );
-}
+};
 
 export default App;

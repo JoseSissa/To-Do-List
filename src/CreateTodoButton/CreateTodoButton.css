@@ -24,3 +24,9 @@
     transform: rotate(180deg);
     background-color: #1971c2;
 }
+
+@media (min-width: 800px) {
+    .CreateTodoButton {
+        display: none;
+    }
+}

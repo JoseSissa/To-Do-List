@@ -1,0 +1,27 @@
+.IconContainer {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.IconContainer_check {
+    position: absolute;
+    left: 16px;
+}
+.IconContainer_delete {
+    position: absolute;
+    right: 16px;
+}
+.IconSvg {
+    width: 20px;
+    height: 20px;
+    transition: fill .15s;
+}
+.IconContainer:hover .IconSvg_check {
+    fill: green;
+}
+.IconContainer:hover .IconSvg_delete {
+    fill: red;
+}

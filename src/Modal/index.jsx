@@ -4,9 +4,11 @@ import './Modal.css';
 
 function Modal({ children }) {
     return ReactDom.createPortal(
-        <div className="ModalBackground">
-            { children }
-        </div>,
+        <section className="ModalBackground">
+            <div className="ModalBackground_form">
+                { children }
+            </div>
+        </section>,
         document.getElementById('modal')
     );
 };
