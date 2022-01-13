@@ -1,5 +1,5 @@
 {
-  "name": "intro-react",
+  "name": "To-Do-List",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,5 +40,5 @@
   "devDependencies": {
     "gh-pages": "^3.2.3"
   },
-  "homepages": "https://JoseSissa.github.io/intro-react"
+  "homepage": "https://JoseSissa.github.io/To-Do-List"
 }
