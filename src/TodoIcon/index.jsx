@@ -12,7 +12,6 @@ const iconTypes = {
     ),
 };
 
-
 function TodoIcon({ type, color = 'gray', onClick }) {
     
     return (
