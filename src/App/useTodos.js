@@ -6,8 +6,8 @@ import { useLocalStorage } from './useLocalStorage.js';
 function useTodos () {
 
     const {
-      item : item,
-      saveItem : saveTodos,
+      item,
+      saveItem,
       loading,
       error
     } = useLocalStorage('todo', []);
@@ -37,7 +37,7 @@ function useTodos () {
       const todoIndex = item.findIndex(todo => todo.text === text);
       const newTodos = [...item];
       newTodos[todoIndex].completed ? newTodos[todoIndex].completed = false : newTodos[todoIndex].completed = true;
-      saveTodos(newTodos);
+      saveItem(newTodos);
     };
 
     const addTodo = (text)=> {
@@ -46,7 +46,7 @@ function useTodos () {
         text,
         completed: false,
       })
-      saveTodos(newTodos);
+      saveItem(newTodos);
     };
   
     // Eliminando TODOs
@@ -54,7 +54,7 @@ function useTodos () {
       const todoIndex = item.findIndex(todo => todo.text === text);
       const newTodos = [...item];
       newTodos.splice(todoIndex, 1);
-      saveTodos(newTodos);
+      saveItem(newTodos);
     };
 
     return {

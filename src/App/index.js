@@ -13,6 +13,7 @@ import { TodoForm } from '../TodoForm';
 import { TodoError } from '../TodoError';
 import { TodoLoading } from '../TodoLoading';
 import { EmptyTodos } from '../EmptyTodo';
+import { EmptySearchResults } from '../EmptySearchResults/emptySearchResults.jsx';
 import './App.css';
 
 
@@ -29,17 +30,16 @@ function App() {
     totalTodos,
     searchValue,
     setSearchValue,
-    addTodo,
+    // addTodo,
   } = useTodos();
-
+  console.log('Hola');
   return (
     <React.Fragment>
       <TodoImage />
       <article className='main'>
-
           <TodoHeader>
-              <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
-              <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+              <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} loading={loading} />
+              <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} loading={loading} />
           </TodoHeader>
 
           <TodoList
@@ -49,7 +49,13 @@ function App() {
             onError={() => <TodoError />}
             onLoading={() => <TodoLoading />}
             onEmptyTodos={() => <EmptyTodos />}
-            render={todo => (
+            totalTodos = {totalTodos}
+            searchValue = {searchValue}
+            onEmptySearchResults={(searchText) => <EmptySearchResults searchText={searchText} />}
+            
+          >
+            {
+              todo => (
                 <TodoItem 
                       key={todo.text}
                       text={todo.text}
@@ -57,21 +63,23 @@ function App() {
                       onComplete = {()=>completeTodo(todo.text)}
                       onDelete = {()=>deleteTodo(todo.text)}
                   />
-            )}
-          />
+              )
+            }
+          </TodoList>
 
-          {openModal && (
-              <Modal>
+          {!!openModal && (
+              <Modal>                
                   <TodoForm />
               </Modal>
           )}
 
           <CreateTodoButton
-              setOpenModal={setOpenModal} openModal={openModal}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
           />
       </article>
     </React.Fragment>
 );
 };
 
-export default App;
+export { App };

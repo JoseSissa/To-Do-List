@@ -14,12 +14,6 @@
     line-height: 24px;
     font-weight: 400;
 }
-/* .LoadingTodo_completeIcon,
-.LoadingTodo_deleteIcon {
-    border-radius: 50px;
-    height: 48px;
-    width: 48px;
-} */
 .LoadingTodo_completeIcon {
     position: absolute;
     left: 12px;

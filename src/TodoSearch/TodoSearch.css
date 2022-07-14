@@ -20,3 +20,6 @@
 .TodoSearch:focus {
     outline: 2px solid rgba(41, 88, 182, 0.5);
 }
+.TodoSearch:disabled {
+    opacity: 25%;
+}

@@ -5,3 +5,6 @@
     font-size: 24px;
     text-align: center;
 }
+.TodoCounter--loading {
+    opacity: 25%;
+}

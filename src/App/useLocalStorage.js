@@ -25,8 +25,8 @@ function useLocalStorage (itemName, initialValue) {
           setError(error);
         };
   
-      }, 1000)
-    });
+      }, 3000)
+    }, []);
   
     
   
@@ -40,12 +40,7 @@ function useLocalStorage (itemName, initialValue) {
       };
     };
   
-    return {
-      item,
-      saveItem, 
-      loading,
-      error
-    };
+    return { item, saveItem, loading, error };
   };
 
   export { useLocalStorage };

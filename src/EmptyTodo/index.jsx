@@ -1,7 +1,7 @@
 import React from 'react';
 
 function EmptyTodos() {
-    return <p>¡CREA TU PRIMER TODO!</p>;
+    return <p>¡CREATE YOUR FIRST TASK!</p>;
 };
 
 export { EmptyTodos };
