@@ -3,12 +3,12 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   background: #FFFFFF;
-  color: #183153;
+  color: #241C15;
   font-family: 'Ubuntu', sans-serif;
 }
 
 #root {
   position: relative;
   min-height: 100vh;
-  display: flex;
+  margin: 0 24px;
 }

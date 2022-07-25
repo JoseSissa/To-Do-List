@@ -1,26 +1,11 @@
-@media (max-width: 800px) {
-    .ModalBackground {
-        position: fixed;
-        top: 0px;
-        left: 0;
-        right: 0;
-        bottom: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        background-color: rgba(32, 35, 41, 0.8);
-    }
-    .ModalBackground_form {
-        width: 95%;
-        height: 370px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 25px;
-        border-radius: 10px;
-
-        background-color: #FFD43B;
-    }
+.ModalBackground {
+  background: rgba(0,0,0,.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
