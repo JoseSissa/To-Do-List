@@ -1,7 +1,8 @@
-.TodoTask {
-    width: 100%;
+.TodoList-container {
+  text-align: center;
 }
 ul {
-    padding: 0 20px;
-    list-style: none;
+  margin: 0;
+  padding: 0 0 56px 0;
+  list-style: none;
 }

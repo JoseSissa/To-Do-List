@@ -1,25 +1,25 @@
 .TodoSearch {
-    width: 90%;
-    height: 45px;
-    box-sizing: border-box;
-    padding: 5px 25px;
-    margin-bottom: 50px;
-    border-radius: 25px;
-    border: 1px solid #183153;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    background-color: #F9FBFC;
-    color: #4d4f53;
-    box-shadow: 0 5px 8px rgba(32, 35, 41, 0.6);
+  width: 90%;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 5px 25px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  border: 1px solid rgba(36,28,21,0.3);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #F9FBFC;
+  color: #4d4f53;
+  box-shadow: 0 5px 8px rgba(32, 35, 41, 0.6);
 }
 .TodoSearch::placeholder {
-    font-weight: 300;
-    color: rgba(24, 49, 83, 0.5);
+  font-weight: 300;
+  color: rgba(24, 49, 83, 0.5);
 }
 .TodoSearch:focus {
-    outline: 2px solid rgba(41, 88, 182, 0.5);
+  outline: 2px solid rgba(41, 88, 182, 0.5);
 }
 .TodoSearch:disabled {
-    opacity: 25%;
+  opacity: 25%;
 }

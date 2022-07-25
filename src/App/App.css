@@ -1,18 +1,1 @@
-.main {
-  width: 50%;
-  position: absolute;
-  right: 0;
-  box-sizing: border-box;
-  text-align: center;
-}
 
-@media (max-width: 800px) {
-  .main {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .ImageBg {
-    display: none;
-  }
-}

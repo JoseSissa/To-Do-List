@@ -1,34 +1,21 @@
 .TodoItem {
+  background-color: #FAFAFA;
   position: relative;
-  width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  padding: 0 16px;
-  border: 1px solid #183153;
-  border-radius: 15px;
-  background-color: #FFD43B;
-  box-shadow: 0 6px 0 #183153;
-  }
-.check, .trash {cursor: pointer;}
-.check {
-  width: 25px;
-  height: 25px;
+  margin-top: 24px;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
 }
-.trash {
-  width: 18px;
-  height: 24px;
-}
+
 .TodoItem-p {
+  color: #1E1E1F;
   margin: 24px 0 24px 24px;
   width: calc(100% - 120px);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
 }
-.TodoItem-p--completed {
-  text-decoration-line: line-through;
+.TodoItem-p--complete {
+  text-decoration: line-through;
 }

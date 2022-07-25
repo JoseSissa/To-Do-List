@@ -1,27 +1,30 @@
-.IconContainer {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.Icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  /* background-color: #CCC; */
 }
-.IconContainer_check {
-    position: absolute;
-    left: 16px;
+.Icon-container--check {
+  position: absolute;
+  left: 12px;
 }
-.IconContainer_delete {
-    position: absolute;
-    right: 16px;
+.Icon-container--delete {
+  position: absolute;
+  top: -24px;
+  right: 0;
 }
-.IconSvg {
-    width: 20px;
-    height: 20px;
-    transition: fill .15s;
+
+.Icon-svg {
+  width: 24px;
+  height: 24px;
+  transition: fill .15s;
 }
-.IconContainer:hover .IconSvg_check {
-    fill: green;
+.Icon-container:hover .Icon-svg--check {
+  fill: #4caf50;
 }
-.IconContainer:hover .IconSvg_delete {
-    fill: red;
+.Icon-container:hover .Icon-svg--delete {
+  fill: red;
 }
