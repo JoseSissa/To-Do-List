@@ -2,7 +2,11 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #FFFFFF;
+  /* background: #FFFFFF; */
+  background: url('/public/img/bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #241C15;
   font-family: 'Ubuntu', sans-serif;
 }
