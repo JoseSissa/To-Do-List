@@ -1,13 +1,18 @@
 .TodoItem {
-  background-color: #FAFAFA;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  border: 1px solid rgba(0,0,0,.4);
+  border-radius: 8px;
+  background-color: #ffe01b;
+  box-shadow: 0 4px 0 0px rgba(0,0,0,.4);
 }
-
+.TodoItem:hover {
+  border: 1px solid #183153;
+  box-shadow: 0 4px 0 0px #183153;
+}
 .TodoItem-p {
   color: #1E1E1F;
   margin: 24px 0 24px 24px;

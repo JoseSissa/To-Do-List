@@ -12,3 +12,6 @@ html, body {
   min-height: 100vh;
   margin: 0 24px;
 }
+header{
+  text-align: center;
+}

@@ -18,18 +18,11 @@ function TodoForm({ addTodo, setOpenModal }) {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Write your new task</label>
-      <textarea value={newTodoValue} onChange={onChange} placeholder="Go to the gym :)"/>
+      <label>¡Write your new task!</label>
+      <textarea value={newTodoValue} onChange={onChange} placeholder="Go to the gym :)" required/>
       <div className="TodoForm-buttonContainer">
-        <button type="button" className="TodoForm-button TodoForm-button--cancel" onClick={onCancel}>
-          Cancel
-        </button>
-        <button
-          type="submit"
-          className="TodoForm-button TodoForm-button--add"
-        >
-          Create
-        </button>
+        <button type="submit" className="TodoForm-button TodoForm-button--add">Create</button>
+        <button type="button" className="TodoForm-button TodoForm-button--cancel" onClick={onCancel}>Cancel</button>
       </div>
     </form>
   );
