@@ -29,7 +29,6 @@ function App() {
     addTodo,
     sincronizeTodos,
   } = useTodos();
-  console.log('holaaaaaa');
   return (
     <React.Fragment>
       <TodoHeader loading={loading}>
@@ -68,7 +67,7 @@ function App() {
       </TodoList>
 
       {!!openModal && (
-        <Modal>
+        <Modal openModal={openModal} setOpenModal={setOpenModal}>
           <TodoForm
             addTodo={addTodo}
             setOpenModal={setOpenModal}

@@ -1,8 +1,18 @@
 .TodoList-container {
-  text-align: center;
+  max-width: 1350px;
+  margin: 0 auto 100px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 410px));
+  gap: 10px;
 }
 ul {
   margin: 0;
   padding: 0 0 56px 0;
   list-style: none;
+}
+@media (min-width: 1024px) {
+    .TodoList-container {
+      gap: 35px;
+    }
 }
