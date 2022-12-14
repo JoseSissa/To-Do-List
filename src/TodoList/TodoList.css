@@ -6,6 +6,9 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 410px));
   gap: 10px;
 }
+.TodoList-container p {
+  text-align: center;
+}
 ul {
   margin: 0;
   padding: 0 0 56px 0;
